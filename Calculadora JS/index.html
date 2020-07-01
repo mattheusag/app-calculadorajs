@@ -97,21 +97,24 @@
   <script>
 
     function calcular(tipo, valor){
+      // exbir os itens no visor
       if (tipo === 'item'){
         document.getElementById('resultado').value += valor
       } else if (tipo ==='acao'){
+        // para limpar o visor
         if (valor === 'c') {
           document.getElementById('resultado').value = ''
         }
-
-        else if (valor === '/' ||  valor === '*' || valor === '-' || valor === '+' || valor === '.')
+        // para concatenar os simbolos no  visor 
+        else if (valor === '/' ||  valor === '*' || valor === '-' || valor === '+' || valor === '.'){
         document.getElementById('resultado').value += valor
-
+      }
+      // calcular o resultado final
        else if (valor === '=') {
-          document.getElementById('resultado').value = eval(document.getElementById('resultado').value)
+          document.getElementById('resultado').value = eval(document.getElementById('resultado').value) //  eval é uma função que avalia uma string como se fosse uma expressão do JS e retorna um resultado;
         }
-      }
-      }
+      } // termino do if com tipo === ação
+} // termino do function
 
 
   </script>
